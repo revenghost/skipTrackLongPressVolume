@@ -96,7 +96,7 @@ public class VolumeKeyService extends NotificationListenerService implements Med
             if(keyEvent.getAction() == KeyEvent.ACTION_DOWN && keyEvent.getRepeatCount() <= 1) {
                 int keyCode = keyEvent.getKeyCode();
 
-                int event = (keyCode == KEYCODE_VOLUME_UP) ? KEYCODE_MEDIA_NEXT : KEYCODE_MEDIA_PREVIOUS;
+                int event = (keyCode == KEYCODE_VOLUME_UP) ? KEYCODE_MEDIA_NEXT : KEYCODE_MEDIA_PREVIOUS;  // something here maybe for playpause?
                 int msgRes = (keyCode == KEYCODE_VOLUME_UP) ? R.string.msg_media_next : R.string.msg_media_pre;
 
                 KeyEvent skipEvent = new KeyEvent(keyEvent.getAction(), event);
